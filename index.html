@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 True Brothers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0A66C2;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            height: 200px;
+            padding: 20px;
+        }
+
+        .header-bg {
+            background-image: linear-gradient(to bottom right, #0A66C2, #0056b3);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+            border-radius: 0px 0px 30px 30px;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+            object-fit: cover;
+            margin: 0;
+            display: block;
+        }
+
+        nav {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            height: 70px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            padding: 12px 24px;
+            color: white;
+            background-color: #0056b3;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #003f7d;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #0A66C2;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-image {
+            max-width: 150px;
+            height: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 1em;
+            background-color: #0A66C2;
+            color: white;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-bg">
+        <img src="{{ url_for('static', filename='IMG_8198.jpeg') }}" alt="Header Image" class="header-image">
+    </header>
+
+    <nav>
+        <a href="#mission">Mission Statement</a>
+        <a href="#nurturing">Nurturing Empowered Youth</a>
+        <a href="#programs">Programs</a>
+        <a href="#about">About</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <div class="box" id="mission">
+            <img src="{{ url_for('static', filename='community-hands.jpg') }}" alt="Mission Image" class="section-image">
+            <h2>Mission Statement</h2>
+            <p>Our mission is to empower and uplift the youth to become the best versions of themselves.</p>
+        </div>
+
+        <div class="box" id="nurturing">
+            <img src="{{ url_for('static', filename='91.jpg') }}" alt="Nurturing Image" class="section-image">
+            <h2>Nurturing Empowered Youth</h2>
+            <p>We’re working to make the world a better place to live for everyone. We spread awareness for our cause, offer programs and services to our community, and fund initiatives for change.</p>
+        </div>
+
+        <div class="box" id="programs">
+            <img src="{{ url_for('static', filename='56.jpg') }}" alt="Programs Image" class="section-image">
+            <h2>Programs</h2>
+            <p>Our purpose is to provide educational mentoring services to aid in mental, social, and physical health through Education, Economic Empowerment, and Health & Wellness.</p>
+        </div>
+
+        <div class="box" id="about">
+            <img src="{{ url_for('static', filename='IMG_8198.jpeg') }}" alt="About Image" class="section-image">
+            <h2>About</h2>
+            <p>We are a non-profit community-based organization that specializes in providing educational mentoring services to aid in mental, social, and physical health. We foster relationships with local businesses and leaders to assist minority youth in obtaining or creating gainful employment.</p>
+            <p>“2 True Brothers was created to help the youth in our community who are looking to better themselves, and our goal is to provide them with the necessary resources.” - Andre Hines, President</p>
+        </div>
+
+        <div class="box" id="our-story">
+            <img src="{{ url_for('static', filename='93.jpg') }}" alt="Our Story Image" class="section-image">
+            <h2>Our Story</h2>
+            <p>2 True Brothers was founded by brothers Andre Hines and Audrick Brown, both natives of Prince William County, Virginia. Having similar upbringings, they understand firsthand the challenges youth face during their critical stages of development and are dedicated to providing the resources needed to positively change their futures.</p>
+        </div>
+
+        <div class="box" id="what-we-do">
+            <img src="{{ url_for('static', filename='OIP.jpg') }}" alt="What We Do Image" class="section-image">
+            <h2>What We Do</h2>
+            <p>Our program provides guidance, motivation, emotional support, and role modeling. We equip our mentees with the knowledge they need to navigate their careers and offer resources that promote personal and professional growth.</p>
+        </div>
+
+        <div class="box" id="impact">
+            <img src="{{ url_for('static', filename='87.jpeg') }}" alt="Impact Image" class="section-image">
+            <h2>Impact</h2>
+            <p>Through mutual respect and understanding, our mentors emphasize the importance of education, excellence, and focus. We create a nurturing community environment to foster the development of our young men.</p>
+            <p>2 True Brothers is a non-profit community-based organization that provides educational mentoring services to aid in mental, social, and physical health.</p>
+        </div>
+
+        <div class="box" id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>2 True Brothers Inc</strong></p>
+            <p>Andre Hines Sr<br>President/Founder</p>
+            <p>4379 Dale Blvd.<br>Dale City, VA 22193</p>
+            <p>Tel: (240) 644-9444</p>
+            <p>Email: <a href="mailto:2TrueBrothersinc@gmail.com">2TrueBrothersinc@gmail.com</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 2 True Brothers. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
